@@ -6,7 +6,7 @@ services:
             context: ./docker
             dockerfile: dockerfile
         volumes:
-          - './app :/tmp/app/'
+          - './app:/tmp/app'
     tomcat:
         image: tomcat:9.0.105-jre11-temurin-noble
 #      build:
