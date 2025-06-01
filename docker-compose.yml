@@ -8,14 +8,18 @@ services:
         volumes:
           - './app :/tmp/app/'
     tomcat:
-        build:
-            context: ./docker
-            dockerfile: tc.dockerfile
+        image: tomcat:9.0.105-jre11-temurin-noble
+#      build:
+#            context: ./docker
+#            dockerfile: tc.dockerfile
         ports:
            - '8880:80'
            - '442:443'
         volumes:
-            - './app:/var/www/html'
+            - './app:/usr/local/tomcat/webapps'
+        depends_on:
+            - mvn
+
 
 
 
