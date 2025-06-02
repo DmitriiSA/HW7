@@ -16,8 +16,8 @@ services:
            - '8880:8080'
            - '442:443'
         volumes:
-            - app:/usr/local/tomcat/webapps
-#            - './app:/usr/local/tomcat/webapps'
+           - app:/usr/local/tomcat/webapps
+#          - './app:/usr/local/tomcat/webapps'
         depends_on:
             - mvn
 volumes:
